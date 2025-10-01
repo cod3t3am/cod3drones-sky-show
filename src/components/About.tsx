@@ -8,12 +8,17 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Sobre a Cod3 Drones
+              Sobre a Cod3 Drones Show
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Somos uma empresa inovadora que une tecnologia de ponta, criatividade e 
-              compromisso com soluções sustentáveis. Utilizamos software livre e hardware 
-              de última geração para entregar resultados excepcionais em todos os nossos projetos.
+              Nascemos para transformar eventos em experiências inesquecíveis. Substituímos os fogos 
+              de artifício por <strong className="text-primary">shows coreografados de drones</strong>, 
+              sincronizados com música e luzes. Oferecemos uma solução completa: 
+              <strong className="text-primary"> show + filmagem + edição</strong>, unindo tecnologia, 
+              arte e emoção. Com criatividade e software livre, tornamos esse tipo de espetáculo 
+              acessível para casamentos, festas, feiras, prefeituras e grandes eventos. 
+              Com a Cod3 Drones Show, <strong className="text-accent">o céu vira palco</strong> e 
+              sua história ganha uma nova forma de ser contada.
             </p>
           </div>
 

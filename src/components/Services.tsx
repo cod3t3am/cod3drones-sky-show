@@ -3,24 +3,25 @@ import { Map, Building2, Video, Sparkles } from "lucide-react";
 
 const services = [
   {
+    icon: Sparkles,
+    title: "Shows de Drones",
+    description: "Performances aéreas coreografadas com música e luzes. Show completo + filmagem profissional + edição do vídeo. Uma experiência inesquecível e sustentável.",
+    featured: true,
+  },
+  {
+    icon: Video,
+    title: "Filmagem & Edição",
+    description: "Registramos seu show com drones de filmagem profissional e entregamos um vídeo exclusivo que eterniza o momento.",
+  },
+  {
     icon: Map,
     title: "Mapeamento Territorial",
     description: "Soluções precisas para agricultura, topografia e meio ambiente com tecnologia de ponta.",
   },
   {
     icon: Building2,
-    title: "Mapeamento Imobiliário",
-    description: "Modelos 3D e acompanhamento de obras para construção civil e mercado imobiliário.",
-  },
-  {
-    icon: Video,
     title: "Produção Audiovisual",
     description: "Capturas aéreas profissionais para eventos, publicidade e cinema.",
-  },
-  {
-    icon: Sparkles,
-    title: "Shows de Drones",
-    description: "Performances aéreas coreografadas com 10 drones sincronizados por software livre.",
   },
 ];
 
@@ -37,18 +38,25 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="gradient-card border-border shadow-elegant hover:shadow-hover transition-smooth hover:scale-105"
+              className={`gradient-card border-border shadow-elegant hover:shadow-hover transition-smooth hover:scale-105 ${
+                service.featured ? 'md:col-span-2 border-2 border-primary/30' : ''
+              }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg gradient-primary flex items-center justify-center mb-4">
-                  <service.icon className="h-6 w-6 text-primary-foreground" />
+              <CardHeader className={service.featured ? 'text-center' : ''}>
+                <div className={`${service.featured ? 'h-16 w-16' : 'h-12 w-12'} rounded-lg gradient-primary flex items-center justify-center mb-4 ${service.featured ? 'mx-auto' : ''}`}>
+                  <service.icon className={`${service.featured ? 'h-8 w-8' : 'h-6 w-6'} text-primary-foreground`} />
                 </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
+                {service.featured && (
+                  <div className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-semibold mb-2">
+                    Nosso Destaque
+                  </div>
+                )}
+                <CardTitle className={service.featured ? 'text-2xl' : 'text-xl'}>{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">

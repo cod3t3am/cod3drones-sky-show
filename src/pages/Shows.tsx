@@ -3,13 +3,15 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Music, Leaf, Lightbulb, Check } from "lucide-react";
-import droneShowImage from "@/assets/drone-show.jpg";
+import droneShowImage from "@/assets/drone-show-night.jpg";
 import { Link } from "react-router-dom";
 
 const Shows = () => {
   const features = [
+    "Pacote completo: Show + Filmagem + Edição",
     "Coreografias customizáveis para cada evento",
     "Sincronização perfeita com música e luzes",
+    "Vídeo profissional exclusivo do seu evento",
     "Alternativa sustentável aos fogos de artifício",
     "Zero poluição sonora e ambiental",
     "Performances seguras e controladas",
@@ -49,8 +51,8 @@ const Shows = () => {
                   Shows de Drones Cod3
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                Uma experiência única que substitui os fogos de artifício por performances aéreas coreografadas
+              <p className="text-xl md:text-2xl text-foreground/90 mb-8">
+                Transforme seu evento em uma experiência inesquecível. Shows coreografados + filmagem profissional + edição exclusiva.
               </p>
               <Button asChild size="lg" variant="hero" className="text-lg px-8 py-6 h-auto">
                 <Link to="/#contato">Solicitar Orçamento</Link>
@@ -148,17 +150,31 @@ const Shows = () => {
                 ))}
               </div>
 
-              <Card className="mt-8 shadow-elegant gradient-primary">
-                <CardContent className="pt-6">
-                  <div className="text-center text-primary-foreground">
-                    <h3 className="text-2xl font-bold mb-3">Software Livre</h3>
-                    <p className="text-primary-foreground/90 max-w-2xl mx-auto">
-                      Utilizamos o <strong>DroneShow</strong> integrado com <strong>QGroundControl</strong>, 
-                      plataformas open source que garantem total controle e customização das performances.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <Card className="shadow-elegant gradient-primary">
+                  <CardContent className="pt-6">
+                    <div className="text-center text-primary-foreground">
+                      <h3 className="text-2xl font-bold mb-3">Software Livre</h3>
+                      <p className="text-primary-foreground/90">
+                        Utilizamos o <strong>DroneShow</strong> integrado com <strong>QGroundControl</strong>, 
+                        plataformas open source que garantem total controle e customização.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                <Card className="shadow-elegant border-2 border-primary/30">
+                  <CardContent className="pt-6">
+                    <div className="text-center">
+                      <h3 className="text-2xl font-bold mb-3 gradient-primary bg-clip-text text-transparent">Pacote Completo</h3>
+                      <p className="text-muted-foreground">
+                        Além do show, registramos tudo com drones de filmagem profissional e 
+                        entregamos um <strong className="text-primary">vídeo exclusivo editado</strong> que eterniza o seu momento.
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </section>
